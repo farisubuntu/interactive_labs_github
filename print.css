@@ -5,5 +5,9 @@ body{
 img{
     background-color: white;
     border:1px dashed green;
-    size: 
+    margin:5px auto;
+    max-width: 50%; 
+}  
+nav.foot-navigation{
+    display: none;
 }
