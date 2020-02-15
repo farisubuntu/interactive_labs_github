@@ -1,4 +1,14 @@
 img{
- max-width: 40vw;
+ max-width:450px;
+ max-height: 500px;
  
+}
+/* 
+figure img,figcaption{
+    border:1px solid blue;
+    color:red;
+} */
+
+body{
+    margin-left:2%;
 }

@@ -168,7 +168,7 @@
 }
 
 #content p,
-#content li, {
+#content li {
   line-height: 125%;
 }
 
@@ -427,4 +427,7 @@ h3 b {
     background: blue;
     content: counter(content-heading-counter);
   }
+}
+.sample code{
+  background-color: inherit;
 }

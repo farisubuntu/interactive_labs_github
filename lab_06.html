@@ -96,9 +96,28 @@
 
       <div id="content" tabindex="-1">
         <h1 class="lab_title"><em>lab 6</em>  Staging Changes</h1>
+        <h2>Preamble:</h2>
+        <em><strong>Remember</strong>: </em>Each file in your woriking directory can be in one of two states:<em> tracked</em>or
+           ,<em> untracked</em>
+          <ul>
+            <li><em>tracked:</em> files which were in the last snapshot(<em>Git knows about</em>), and can be:</li>
+              <ul>
+              <li><em>modified</em> </li>
+              <li><em>unmodified</em> </li>
+              <li><em>staged</em></li>
+              </ul>
+          <li><em>Untracked: </em>any files in your working directory that were <b>not</b> in last snapshot and <b>not</b> in your staging area.</li>
+            </ul>
+            <br>
+        <figure>
+          <img src="images/lifecycle.png" alt="lifecycle.png">
+          <figcaption>Figure 8: The lifecycle of the status of your files.</figcaption>
+
+        </figure>
+        
 <h2>Goals</h2>
 <ul>
-	<li>Learn how to stage changes for later commits</li>
+	<li>Learn how to <em><b>stage</b>(Tracking)</em> changes for later commits</li>
 </ul>
 <h2>Add Changes</h2>
 <p>Now tell git to stage the changes.  Check the status</p>
