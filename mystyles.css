@@ -12,3 +12,12 @@ figure img,figcaption{
 body{
     margin-left:2%;
 }
+.language-console{
+    color:blue;
+}
+figure{
+border:1px dashed red;
+padding:0.2%;
+/* margin-left: -5px; */
+
+}
