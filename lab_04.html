@@ -121,6 +121,71 @@ MM Rakefile
 A  lib/git.rb
 M  lib/simplegit.rb
 ?? LICENSE.txt</code></pre>
+<p>New files that aren’t tracked have a <code class="literal">??</code> </p>
+<p>new files that have been added to the staging area have an <code class="literal">A</code>, </p>
+<p>modified files have an <code class="literal">M</code> and so on.</p>
+  <p>There are two columns to the output — the left-hand column indicates the status of the staging area and the
+  right-hand column indicates the status of the working tree.</p>
+  
+  The <code class="literal">Rakefile</code> was modified, staged and then modified again, so there are changes
+  to it that are both staged and unstaged.</p>
+  <h3 id="_git_diff_staged">Viewing Your Staged and Unstaged Changes</h3>
+  <p>If the <code class="literal">git status</code> command is too vague for you — you want to know exactly what
+    you changed, not just which files were changed — you can use the <code class="literal">git diff</code>
+    command.</p>
+   <p>We use <code class="literal">git diff</code> to answer these two questions:
+    <li> What have you changed but not yet staged?</li>
+    <li>And what have you staged that you are about to commit?</li>
+   </p>
+   <p> Although <code class="literal">git status</code> answers those questions very generally by listing the file
+    names, <code class="literal">git diff</code> shows you the exact lines added and removed — the patch, as it
+    were.</p>
+    <p><mark>
+      It’s important to note that <code class="literal">git diff</code> by itself doesn’t show all changes made
+        since your last commit — only changes that are still unstaged.
+    </mark></p>
+    <h2>Rules of <code>.gitignore</code> patterns</h2>
+    <p>The rules for the patterns you can put in the <code class="literal">.gitignore</code> file are as follows:
+    </p>
+    <ul>
+      <li>
+        <span class="principal">Blank lines or lines starting with <code class="literal">#</code> are
+          ignored.</span>
+      </li>
+      <li>
+        <span class="principal">Standard glob patterns work, and will be applied recursively throughout the entire
+          working tree.</span>
+      </li>
+      <li>
+        <span class="principal">You can start patterns with a forward slash (<code class="literal">/</code>) to
+          avoid recursivity.</span>
+      </li>
+      <li>
+        <span class="principal">You can end patterns with a forward slash (<code class="literal">/</code>) to
+          specify a directory.</span>
+      </li>
+      <li>
+        <span class="principal">You can negate a pattern by starting it with an exclamation point (<code
+            class="literal">!</code>).</span>
+      </li>
+    </ul>
+    <div class="content">
+      <p>GitHub maintains a fairly comprehensive list of good <code class="literal">.gitignore</code> file
+        examples for dozens of projects and languages at <a href="https://github.com/github/gitignore"
+          class="link">https://github.com/github/gitignore</a> if you want a starting point for your project.</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

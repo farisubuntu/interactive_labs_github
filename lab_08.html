@@ -96,6 +96,10 @@
 
       <div id="content" tabindex="-1">
         <h1 class="lab_title"><em>lab 8</em>  Committing Changes</h1>
+        <h2>Preamble:</h2>
+        <p>To see what you have staged that your will go into your next commit, use:</p>
+        <h3><b>git diff --cached</b></h3>OR: 
+        <h3><b>git diff --staged</b></h3>
 <h2>Goals</h2>
 <ul>
 	<li>Learn how to commit changes to the repository</li>
@@ -110,6 +114,9 @@
 	<li><span class="caps">VISUAL</span> environment variable</li>
 	<li><span class="caps">EDITOR</span> environment variable</li>
 </ul>
+<p>To see what tools availabe in your system</p>
+<h3><b>Execute:</b></h3>
+<pre class="ins">git difftool --tool-help</pre>
 <p>I have the <span class="caps">EDITOR</span> variable set to <code>emacsclient</code>.</p>
 <p>So commit now and check the status.</p>
 <h3><b>Execute:</b></h3>
@@ -135,6 +142,7 @@ Waiting for Emacs...
 </pre>
 <p>The &#8220;Waiting for Emacs&#8230;&#8221; line comes from the <code>emacsclient</code> program which sends the file to a running emacs program and waits for the file to be closed.  The rest of the output is the standard commit messages.</p>
 <h2>Check the status</h2>
+
 <p>Finally let&#8217;s check the status again.</p>
 <h3><b>Execute:</b></h3>
 <pre class="instructions">git status</pre>

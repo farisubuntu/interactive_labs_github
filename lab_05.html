@@ -96,7 +96,44 @@
 
       <div id="content" tabindex="-1">
         <h1 class="lab_title"><em>lab 5</em>  Making Changes</h1>
-<h2>Goals</h2>
+        <h2>Removing Files:</h2>
+        <p>
+          To remove a file from Git (remove it from your <i>tracked files</i> or more accuratly <i>staging area</i>) and then commit,</p>
+          <h3><b>Execute</b></h3>
+          <code class="literal">git rm</code>
+          <p>Also it removes the file from your working directory so you don’t see it as an untracked file the next time around.</p>
+        <p>If you simply remove the file from your working directory (for example, using the shell command <code class="literal">rm file.md</code> ), it shows up under the “Changes not staged for
+          commit” (that is, <em>unstaged</em>) area of your <code class="literal">git status</code> output:</p>
+          
+            <pre class="source language-console"><code><span></span><span style="font-weight: bold">$</span> rm PROJECTS.md
+  <span style="font-weight: bold">$</span> git status
+  On branch master
+  Your branch is up-to-date with 'origin/master'.
+  Changes not staged for commit:
+    (use "git add/rm &lt;file&gt;..." to update what will be committed)
+    (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
+          deleted:    PROJECTS.md
+  no changes added to commit (use "git add" and/or "git commit -a")</code></pre>
+  <p>To keep the file in your working tree but remove it from staging area:</p>
+  <h3><b>Execute</b></h3>
+  <pre class="instructions">$ git rm --cached README.md</pre>
+  <p>To removes all files that have the .log extension in the log/ directory:</p>
+<h3><b>Execute:</b></h3>
+<pre class="instructions">$ git rm \*~</pre>
+<p>Note the backslash (<code class="literal">\</code>) in front of the <code class="literal">*</code>.
+  This is necessary because Git does its own filename expansion in addition to your shell’s filename expansion.</p>
+  <h3 id="_git_mv">Moving Files</h3>
+  <p>Git doesn’t explicitly track file movement. If you rename a file in Git, no metadata is stored in Git that tells it you renamed the file. </p>
+    <pre class="instructions">$ git mv file_from file_to</code></pre>
+    <p>However, this is equivalent to running something like this:</p>
+      <pre class="source language-console"><code><span></span><span style="font-weight: bold">$</span> mv README.md README
+<span style="font-weight: bold">$</span> git rm README.md
+<span style="font-weight: bold">$</span> git add README</code></pre>
+<p>Git figures out that it’s a rename implicitly, so it doesn’t matter if you rename a file that way or with the
+  <code class="literal">mv</code> command.
+  The only real difference is that <code class="literal">git mv</code> is one command instead of three — it’s a
+  convenience function.</p>
+  <h2>Goals</h2>
 <ul>
 	<li>Learn how to monitor the state of the working directory</li>
 </ul>
