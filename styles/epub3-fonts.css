@@ -208,6 +208,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.4;
   /* or 1.2125 */
   text-align: left;
+  hyphens: none;
   -webkit-hyphens: none;
   /* disable hyphenation where supported (e.g., iBooks) */
   word-wrap: break-word;
@@ -239,6 +240,7 @@ body p, li, dt, dd, footer {
 code, kbd, pre {
   color: #191918;
   font-family: "M+ 1mn", monospace;
+  hyphens: none;;
   -webkit-hyphens: none;
   /* disable hyphenation where supported (e.g., iBooks) */
 }
